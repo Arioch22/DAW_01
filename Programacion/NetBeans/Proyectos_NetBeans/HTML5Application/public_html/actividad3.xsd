@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="almazara">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="clientes">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="cliente">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="contacto">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element type="xs:string" name="nombre"/>
+                                                    <xs:element type="xs:string" name="apellido"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="tipo">
+                                            <xs:complexType>
+                                                <xs:choice>
+                                                    <xs:element name="particular">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="NIF">
+                                                                    <xs:annotation>
+                                                                        <xs:documentation> NIF formado por 8 digitos y una letra mayusucula</xs:documentation>
+                                                                    </xs:annotation>
+                                                                    <xs:simpleType>
+                                                                        <xs:restriction base="xs:string">
+                                                                            <xs:length value="9"/>
+                                                                            <xs:pattern value="[0-9]{8}[A-Z]"/> 
+                                                                        </xs:restriction>
+                                                                    </xs:simpleType>
+                                                                </xs:element>
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="empresa">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="razon-social" type="xs:string"/>
+                                                                <!--Al poder tener una empresa varias webs o ninguna en el minimo pongo 0 y 
+                                                                en el maximo no lo determino al no saber exactamente un número máximo de webs -->
+                                                                <xs:element name="web" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+                                                                <xs:element name="CIF">
+                                                                    <xs:annotation>
+                                                                        <xs:documentation> Cif de la empresa esta formado por letra mayúscula que indica el tipo de empresa ej. A = sociedad anónima></xs:documentation>
+                                                                    </xs:annotation>
+                                                                    <xs:simpleType>
+                                                                        <xs:restriction base="xs:string">
+                                                                            <xs:length value="9"/>
+                                                                            <xs:pattern value="(A|B|C|D|E|F|G|H|J|K|L|M|N|P|Q|R|S|U|V|W)[0-9]{8}"/>
+                                                                        </xs:restriction>
+                                                                    </xs:simpleType>
+                                                                </xs:element>
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:choice>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="direccion">
+                                            <xs:complexType>
+                                                <xs:all>
+                                                    <xs:element name="via">
+                                                        <xs:complexType>
+                                                            <xs:simpleContent>
+                                                                <xs:extension base="xs:string">
+                                                                    <xs:attribute type="xs:string" name="tipo"/>
+                                                                </xs:extension>
+                                                            </xs:simpleContent>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element type="xs:integer" name="numero"/>
+                                                    <xs:element type="xs:string" name="localidad"/>
+                                                    <xs:element type="xs:string" name="provincia"/>
+                                                    <xs:element name="CP">
+                                                        <xs:annotation>
+                                                            <xs:documentation> El CP esta formado por 5 números</xs:documentation>
+                                                        </xs:annotation>
+                                                        <xs:simpleType>
+                                                            <xs:restriction base="xs:integer">
+                                                                <!--<xs:length value="5"/>-->
+                                                                <xs:pattern value="[0-9]{5}"/>
+                                                            </xs:restriction>
+                                                        </xs:simpleType>
+                                                    </xs:element>
+                                                </xs:all>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="telefonos">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="telefono" minOccurs="0" maxOccurs="unbounded">
+                                                        <xs:complexType>
+                                                            <xs:simpleContent>
+                                                                <xs:extension base="xs:string">
+                                                                    <xs:attribute name="tipo"/>
+                                                                </xs:extension>
+                                                            </xs:simpleContent>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="facturas">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="factura" minOccurs="1">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="forma-pago">
+                                                                    <xs:simpleType>
+                                                                        <xs:restriction base="xs:string">
+                                                                            <xs:enumeration value="Efectivo"/>
+                                                                            <xs:enumeration value="Tarjeta"/>
+                                                                            <xs:enumeration value="Transferencia"/>
+                                                                        </xs:restriction>
+                                                                    </xs:simpleType>
+                                                                </xs:element>
+                                                                <xs:element type="xs:string" name="fecha-vencimiento"/>
+                                                                <xs:element name="productos">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="producto" maxOccurs="unbounded" minOccurs="1">
+                                                                                <xs:complexType>
+                                                                                    <xs:sequence>
+                                                                                        <xs:element type="xs:string" name="nombre"/>
+                                                                                        <xs:element type="xs:string" name="cantidad-unidad"/>
+                                                                                        <xs:element name="precio">
+                                                                                            <xs:complexType>
+                                                                                                <xs:simpleContent>
+                                                                                                    <xs:extension base="xs:decimal">
+                                                                                                        <xs:attribute type="xs:string" name="moneda" use="optional" default="Euro"/>
+                                                                                                    </xs:extension>
+                                                                                                </xs:simpleContent>
+                                                                                            </xs:complexType>
+                                                                                        </xs:element>
+                                                                                        <xs:element type="xs:decimal" name="cantidad"/>
+                                                                                    </xs:sequence>
+                                                                                    <xs:attribute name="codigo" use="required">
+                                                                                        <xs:annotation>
+                                                                                            <xs:documentation>El código producto tiene el siguiente esquema "XYZ-XYZ-ZYZ"</xs:documentation>
+                                                                                        </xs:annotation>
+                                                                                        <xs:simpleType>
+                                                                                            <xs:restriction base="xs:string">
+                                                                                                <xs:length value="11"/>
+                                                                                                <xs:pattern value="[A-Z]{3}-[A-Z]{3}-[A-Z]{3}"/>
+                                                                                            </xs:restriction>
+                                                                                        </xs:simpleType>
+                                                                                    </xs:attribute>
+                                                                                </xs:complexType>
+                                                                            </xs:element>
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="totalizacion">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="subtotal">
+                                                                                <xs:complexType>
+                                                                                    <xs:simpleContent>
+                                                                                        <xs:extension base="xs:decimal">
+                                                                                            <xs:attribute type="xs:string" name="moneda" use="optional" default="Euro"/>
+                                                                                        </xs:extension>
+                                                                                    </xs:simpleContent>
+                                                                                </xs:complexType>
+                                                                            </xs:element>
+                                                                            <xs:element name="iva">
+                                                                                <xs:complexType>
+                                                                                    <xs:simpleContent>
+                                                                                        <xs:extension base="xs:decimal">
+                                                                                            <xs:attribute type="xs:decimal" name="tipo"/>
+                                                                                            <xs:attribute type="xs:string" name="moneda" default="Euro"/>
+                                                                                        </xs:extension>
+                                                                                    </xs:simpleContent>
+                                                                                </xs:complexType>
+                                                                            </xs:element>
+                                                                            <xs:element name="total">
+                                                                                <xs:complexType>
+                                                                                    <xs:simpleContent>
+                                                                                        <xs:extension base="xs:decimal">
+                                                                                            <xs:attribute type="xs:string" name="moneda" default="Euro"/>
+                                                                                        </xs:extension>
+                                                                                    </xs:simpleContent>
+                                                                                </xs:complexType>
+                                                                            </xs:element>
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                            </xs:sequence>
+                                                            <xs:attribute name="fecha" type="xs:string" use="required"/>
+                                                            <xs:attribute name="num">
+                                                                <xs:annotation>
+                                                                    <xs:documentation>La numeración de las facturas es de la siguiente manera
+                                                                        Inicia por EMP si es para una empresa o PAR para un particular
+                                                                        despues seguido de un guión, año, guión, y código cliente
+                                                                    </xs:documentation>
+                                                                </xs:annotation>
+                                                                <xs:simpleType>
+                                                                    <xs:restriction base="xs:string">
+                                                                        <xs:length value="11"/>
+                                                                        <xs:pattern value="(EMP|PAR)-[0-9]{2}-[0-9]{4}"/>
+                                                                    </xs:restriction>
+                                                                </xs:simpleType>
+                                                            </xs:attribute>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="codigo">
+                                        <xs:annotation>
+                                            <xs:documentation>El código cliente esta formado por 1 letra y 4 números</xs:documentation>
+                                        </xs:annotation>
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:length value="5"/>
+                                                <xs:pattern value="(E|P)[0-9]{4}"/>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:attribute>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>    
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute type="xs:string" name="nombre" fixed="Oleum Est Aurum"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="ingenieria_inversa">
+  <ClassDiagramComponents>
+    <Class name="Empleado" package="ingenieria_inversa" visibility="public" isAbstract="true" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="apellido" type="String" visibility="private"/>
+        <Field name="nss" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="apellido"/>
+          <Argument type="String" name="nss"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="getApellido" returnType="String" visibility="public"/>
+        <Method name="setApellido" returnType="void" visibility="public">
+          <Argument type="String" name="apellido"/>
+        </Method>
+        <Method name="getNss" returnType="String" visibility="public"/>
+        <Method name="setNss" returnType="void" visibility="public">
+          <Argument type="String" name="nss"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="empleadoAsalariado" package="ingenieria_inversa" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields>
+        <Field name="salarioSemanal" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="apellido"/>
+          <Argument type="String" name="nss"/>
+          <Argument type="double" name="salario"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="setSalarioSemanal" returnType="void" visibility="public">
+          <Argument type="double" name="salario"/>
+        </Method>
+        <Method name="getSalarioSemanal" returnType="double" visibility="public"/>
+        <Method name="obtenerMontoPago" returnType="double" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Factura" package="ingenieria_inversa" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Fields>
+        <Field name="numeroPieza" type="String" visibility="private"/>
+        <Field name="descripcionPieza" type="String" visibility="private"/>
+        <Field name="cantidad" type="int" visibility="private"/>
+        <Field name="precioPorArticulo" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="pieza"/>
+          <Argument type="String" name="descripcion"/>
+          <Argument type="int" name="cuenta"/>
+          <Argument type="double" name="precio"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="setNumeroPieza" returnType="void" visibility="public">
+          <Argument type="String" name="pieza"/>
+        </Method>
+        <Method name="getNumeroPieza" returnType="String" visibility="public"/>
+        <Method name="setDescripcionPieza" returnType="void" visibility="public">
+          <Argument type="String" name="descripcion"/>
+        </Method>
+        <Method name="getDescripcionPieza" returnType="String" visibility="public"/>
+        <Method name="setCantidad" returnType="void" visibility="public">
+          <Argument type="int" name="cuenta"/>
+        </Method>
+        <Method name="getCantidad" returnType="int" visibility="public"/>
+        <Method name="setPrecioPorArticulo" returnType="void" visibility="public">
+          <Argument type="double" name="precio"/>
+        </Method>
+        <Method name="getPrecioPorArticulo" returnType="double" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="obtenerMontoPago" returnType="double" visibility="public"/>
+      </Methods>
+    </Class>
+    <Interface name="PorPagar" package="ingenieria_inversa" visibility="public" xPosition="920.0" yPosition="20.0">
+      <Methods>
+        <Method name="obtenerMontoPago" returnType="double" visibility="package"/>
+      </Methods>
+    </Interface>
+    <Class name="Test" package="ingenieria_inversa" visibility="public" xPosition="1220.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="ingenieria_inversa.Factura" target="ingenieria_inversa.PorPagar"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="ingenieria_inversa.Empleado" target="ingenieria_inversa.PorPagar"/>
+    <IsRelation name="is" source="ingenieria_inversa.empleadoAsalariado" target="ingenieria_inversa.Empleado"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

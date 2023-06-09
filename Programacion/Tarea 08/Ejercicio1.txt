@@ -1,0 +1,326 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package Ejercicio1;
+
+import java.io.*;
+import java.util.ArrayList;
+
+/**
+ * Programa para trabajar con archivos de texto.
+ * @profesorado
+ */
+public class Ejercicio1 {
+    
+    /**
+    * Método principal.
+    */
+    
+    
+    static float coeficienteT, coeficienteP;
+    static float notaAprobado, notaNotable, notaSobresaliente;
+    static ArrayList<Alumno> listaAlumnos = new ArrayList<>();
+    
+    public static void main(String args[]) throws IOException{
+
+        //----------------------------------------------
+        //          Declaración de variables 
+        //----------------------------------------------
+
+        // Constantes
+
+
+        // Variables de entrada
+        
+        File fCoeficientes = null;
+        File fAlumnos = null;
+        File alumnos = null;
+        FileReader fr = null;
+        BufferedReader br = null;
+        
+       
+        // Variables de salida
+        
+        FileWriter fw = null;
+        PrintWriter pw = null;
+        File fActa = null;
+        
+        // Variables auxiliares
+        
+        String rutaCoeficientes = System.getProperty("user.dir") + "/recursos/coeficientes.txt";
+        String rutaAlumnos = System.getProperty("user.dir") + "/recursos/listadoAlumnos.txt";
+        String rutaActa = System.getProperty("user.dir") + "/recursos/acta.txt";
+        
+        
+        
+        //----------------------------------------------
+        //                Entrada de datos 
+        //----------------------------------------------
+        
+        
+        // Leemos fichero de Coeficientes y asignamos valores a las variables
+        try {
+            
+            fCoeficientes = new File(rutaCoeficientes);
+            
+            fr = new FileReader(fCoeficientes);
+            br = new BufferedReader(fr);
+            
+            
+            String linea;
+            
+            
+            while((linea=br.readLine())!=null) {                        // Lee el fichero y extrae los valores separándolos y los guarda en las variables destinadas a ello
+                String[] split = linea.split(";");
+                
+                coeficienteT=Float.valueOf(split[0]);
+                coeficienteP = Float.valueOf(split[1]);
+                notaAprobado = Float.valueOf(split[2]);
+                notaNotable = Float.valueOf(split[3]);
+                notaSobresaliente = Float.valueOf(split[4]);
+            }
+                
+                        
+        } catch (FileNotFoundException e) {
+            System.out.println("Fichero no encontrado");            
+        } catch (IOException e) {
+            System.out.println("Hubo un error");
+        } finally {
+            try {
+                if(br != null)
+                    br.close();
+            }
+            catch (IOException e) {
+                System.out.println("Error al cerrar el fichero");
+                System.out.println(e.getMessage());
+            }        
+        }
+        
+        
+        
+        // Leemos fichero de ALUMNOS y asignamos los datos
+        try {
+            
+            fAlumnos = new File(rutaAlumnos);
+            
+            fr = new FileReader(fAlumnos);
+            br = new BufferedReader(fr);
+            
+            
+            String linea;
+            
+            while((linea=br.readLine())!=null) {
+                
+                String[] split = linea.split(";");
+
+                listaAlumnos.add(new Alumno(split[0], split[1], Double.valueOf(split[2]), Double.valueOf(split[3])));               
+                        
+            }
+                
+        } catch (FileNotFoundException e) {
+            System.out.println("Fichero no encontrado");            
+        } catch (IOException e) {
+            System.out.println("Hubo un error");
+        } finally {
+            try {
+                if(br != null)
+                    br.close();
+            }
+            catch (IOException e) {
+                System.out.println("Error al cerrar el fichero");
+                System.out.println(e.getMessage());
+            }        
+        }
+        
+        
+        
+        
+        
+        //----------------------------------------------
+        //                 Procesamiento 
+        //----------------------------------------------
+        
+        /* Esto es innecesario ya que se calculan estos datos directamente en el constructor de la clase Alumno
+        for (Alumno al: listaAlumnos){
+            
+            double notaFinal = calcularNotaFinal(al.getNT(), al.getNP(), coeficienteT, coeficienteP);
+            String notaTexto = calcularNotaActa(notaFinal, notaAprobado, notaNotable, notaSobresaliente );
+            
+        } */
+        
+        
+        // Abro el fichero de salida "acta.txt" para escribir los resultados en él
+        // Recorro el ArrayList listaAlumnos para leer los datos que deben escribirse de cada alumno
+        // Y uso el método toString adaptado para sacar los datos ya "formateados"
+        
+        try {
+            
+            fActa = new File(rutaActa);
+            fw = new FileWriter(fActa);
+            pw = new PrintWriter(fw);
+            
+            pw.println(String.format("%-30s %-20s %-10s %-10s %-10s %-10s", "Nombre Completo", "DNI", "Teoria", "Práctica","Final","Acta"));
+            
+            for (Alumno al: listaAlumnos) {
+                pw.println(al.toString());
+            }
+            
+            
+        } catch (IOException e) {
+            System.out.println("Hubo un error " + e.getMessage());
+            
+        } finally {
+            if(fw!=null) {
+                fw.close();
+            }
+            
+        }
+        
+        
+        //----------------------------------------------
+        //              Salida de resultados 
+        //----------------------------------------------
+        
+        System.out.println ();
+	System.out.println ("Archivos cerrados y procesamento finalizado");
+	System.out.println ("---------");
+        
+        System.out.println(String.format("%-30s %-20s %-10s %-10s %-10s %-10s", "Nombre Completo", "DNI", "Teoria", "Práctica","Final","Acta"));
+        for (Alumno al: listaAlumnos) {
+            System.out.println(al.toString());
+        }
+        
+        
+        System.out.println ();
+	System.out.println ("Fin del programa.");
+        
+        
+    }
+    
+    /**
+     * 
+     * @param notaT Nota de teoría que ha obtenido el alumno.
+     * @param notaP Nota de las prácicas del alumno.
+     * @param cT Coeficiente de lo que puntúa la teoría.
+     * @param cP Coeficiente de lo que puntúan las prácticas.
+     * @return Nota final del alumno.
+     */
+    public static double calcularNotaFinal(double notaT, double notaP, double cT, double cP){
+        return (notaT*cT)/100 + (notaP*cP)/100;
+    }
+    
+    /**
+     * 
+     * @param nota Nota final de un alumno.
+     * @param aprobado Valor umbral entre el suspenso y el aprobado.
+     * @param notable Valor umbral entre el aprobado y el notable.
+     * @param sobresaliente Valor umbral entre el notable y el sobresaliente.
+     * @return Nota del acta (Suspenso, Aprobado, Notable o Sobresaliente).
+     */
+    public static String calcularNotaActa(double nota, double aprobado, double notable, double sobresaliente){
+        if(nota<aprobado)
+            return "Suspenso";
+        else if(nota<notable)
+            return "Aprobado";
+        else if(nota<sobresaliente)
+            return "Notable";
+        else
+            return "Sobresaliente";
+                    
+    }
+    
+    
+    
+    static class Alumno {
+    
+        private String nombreCompleto;
+        private String dni;
+        private double notaTeorica;
+        private double notaPractica;
+        private double notaFinal;
+        private String notaActa;
+
+
+        /**
+         * Constructor de la clase Alumno
+         * @param nombreCompleto
+         * @param dni
+         * @param notaTeorica
+         * @param notaPractica 
+         */
+        Alumno(String nombreCompleto, String dni, double notaTeorica, double notaPractica) {
+            this.nombreCompleto=nombreCompleto;
+            this.dni=dni;
+            this.notaTeorica=notaTeorica;
+            this.notaPractica=notaPractica;   
+            this.notaFinal=calcularNotaFinal(notaTeorica, notaPractica, coeficienteT, coeficienteP);                // Se calcula la nota final directamente en el Constructor
+            this.notaActa=calcularNotaActa(this.notaFinal, notaAprobado, notaNotable, notaSobresaliente);           // Se obtiene la nota del acta directamente en el Constructor
+       }
+       
+       /**
+        * Devuelve el valor de la Nota obtenida en Teoría
+        * @return 
+        */ 
+       double getNT() {
+           return this.notaTeorica;
+       } 
+       
+       
+       /**
+        * Devuelve el valor de la nota obtenida en Prácticas
+        * @return 
+        */
+       double getNP() {
+           return this.notaPractica;           
+       }
+       
+       /**
+        * Obtiene el nombre completo
+        * @return 
+        */
+       String getNombre() {
+           return this.nombreCompleto;
+       }
+       
+       
+       /**
+        * Obtiene el DNI
+        * @return 
+        */
+       String getDNI() {
+           return this.dni;           
+       }
+       
+       /**
+        * Obtiene la nota final
+        * @return 
+        */
+       double getNotaFinal() {
+           return this.notaFinal;
+       }
+       
+       /**
+        * Obtiene la nota del acta
+        * @return 
+        */
+       String getNotaActa(){
+           return this.notaActa;           
+       }
+       
+       
+       @Override
+       public String toString() {
+           
+           String cadena = String.format("%-30s %-20s %-10.2f %-10.2f %-10.2f %-10s", this.nombreCompleto, this.dni, this.notaTeorica, this.notaPractica, this.notaFinal, this.notaActa);
+           
+           return cadena;
+                   
+           
+       }
+    
+    }
+}
+    
+  

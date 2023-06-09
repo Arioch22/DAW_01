@@ -1,0 +1,152 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<!--
+    TODO define vocabulary identification
+    PUBLIC ID: -//vendor//vocabulary//EN
+    SYSTEM ID: http://server/path/actividad2dtd.dtd
+
+-->
+
+<!--
+    An example how to use this DTD from your XML document:
+
+    <?xml version="1.0"?>
+
+    <!DOCTYPE almazara SYSTEM "actividad2dtd.dtd">
+
+    <almazara>
+    ...
+    </almazara>
+-->
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT almazara (clientes)*>
+<!ATTLIST almazara
+    nombre CDATA #IMPLIED
+    CIF CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT clientes (cliente)*>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT cliente (contacto|tipo|direccion|telefonos|facturas)*>
+<!ATTLIST cliente
+    codigo CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT contacto (nombre|apellido)*>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT nombre (#PCDATA)>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT apellido (#PCDATA)>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT tipo (empresa)*>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT empresa (razon-social|web|NIF)*>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT razon-social (#PCDATA)>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT web (#PCDATA)>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT NIF (#PCDATA)>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT direccion (via|numero|localidad|provincia|CP)*>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT via (#PCDATA)>
+<!ATTLIST via
+    tipo CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT numero (#PCDATA)>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT localidad (#PCDATA)>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT provincia (#PCDATA)>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT CP (#PCDATA)>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT telefonos (telefono)*>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT telefono (#PCDATA)>
+<!ATTLIST telefono
+    tipo CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT facturas (factura)*>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT factura (forma-pago|fecha-vencimiento|productos|totalizacion)*>
+<!ATTLIST factura
+    num CDATA #IMPLIED
+    fecha CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT forma-pago (#PCDATA)>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT fecha-vencimiento (#PCDATA)>
+<!ATTLIST fecha-vencimiento
+    dias CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT productos (producto)*>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT producto (nombre|cantidad-unidad|precio|cantidad)*>
+<!ATTLIST producto
+    codigo CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT cantidad-unidad (#PCDATA)>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT precio (#PCDATA)>
+<!ATTLIST precio
+    moneda CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT cantidad (#PCDATA)>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT totalizacion (subtotal|iva|total)*>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT subtotal (#PCDATA)>
+<!ATTLIST subtotal
+    moneda CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT iva (#PCDATA)>
+<!ATTLIST iva
+    tipo CDATA #IMPLIED
+    moneda CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT total (#PCDATA)>
+<!ATTLIST total
+    moneda CDATA #IMPLIED
+  >

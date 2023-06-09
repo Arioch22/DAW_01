@@ -1,0 +1,60 @@
+<!DOCTYPE almazara SYSTEM "actividad2.dtd">
+<almazara nombre="Oleum Est Aurum" CIF="B12345878">
+    <clientes>
+        <cliente codigo="E1234">
+            <contacto>
+                <nombre>Manuel</nombre>
+                <apellido>Flores</apellido>
+            </contacto>
+            <tipo>
+                <empresa>
+                    <razon-social>Restaurante Casa Pepe de la Juderia</razon-social>
+                    <web>https://www.restaurantecasapepedelajuderia.com</web>
+                    <NIF>B14978647</NIF>
+                </empresa>
+            </tipo>
+            <direccion>
+                <via tipo="calle">Romero</via>
+                <numero>1</numero>
+                <localidad>Córdoba</localidad>
+                <provincia>Córdoba</provincia>
+                <CP>14003</CP>
+            </direccion>
+            <telefonos>
+                <telefono tipo="rrhh">957520744</telefono>
+                <telefono tipo="particular">957777777</telefono>
+            </telefonos>
+            <facturas>
+                <factura num="EMP-22-1234" fecha="19/01/2022">
+                    <forma-pago>Efectivo</forma-pago>
+                    <fecha-vencimiento dias="28">15/02/2022</fecha-vencimiento>
+                    <productos>
+                        <producto codigo="PAR-SER-ORO">
+                            <nombre>Parqueoliva Serie Oro</nombre>
+                            <cantidad-unidad>0,5l/u</cantidad-unidad>
+                            <precio moneda="Euro">12,00</precio>
+                            <cantidad>30</cantidad>
+                        </producto>
+                        <producto codigo="RIN-CON-SUB">
+                            <nombre>Rincón de la Subbética</nombre>
+                            <cantidad-unidad>0,5l/u</cantidad-unidad>
+                            <precio moneda="Euro">18,95</precio>
+                            <cantidad>12</cantidad>
+                        </producto>
+                        <producto codigo="JOY-DEL-MON">
+                            <nombre>La joya del Monte</nombre>
+                            <cantidad-unidad>15l/u</cantidad-unidad>
+                            <precio moneda="Euro">69,95</precio>
+                            <cantidad>10</cantidad>
+                        </producto>
+                    </productos>
+                    <totalizacion>
+                        <subtotal moneda="Euro">1286,90</subtotal>
+                        <iva tipo="21" moneda="Euro">270,25</iva>
+                        <total moneda="Euro">1557,15</total>
+                    </totalizacion>
+                </factura>
+            </facturas>
+        </cliente>
+    </clientes>
+</almazara>

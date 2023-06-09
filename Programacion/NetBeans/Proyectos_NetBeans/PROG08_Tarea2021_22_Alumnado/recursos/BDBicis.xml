@@ -1,0 +1,32 @@
+<list>
+  <Ejercicio3.ChipBici>
+    <numSerie>1</numSerie>
+    <fechaAdquisicion>2022-04-06</fechaAdquisicion>
+    <alquilada>false</alquilada>
+    <version>1</version>
+    <revision>0</revision>
+    <kilometrosTotales>0.0</kilometrosTotales>
+    <kilometrosRecorridosAlquilerActual>0.0</kilometrosRecorridosAlquilerActual>
+    <kilometrosRecorridosUltimoAlquiler>0.0</kilometrosRecorridosUltimoAlquiler>
+  </Ejercicio3.ChipBici>
+  <Ejercicio3.ChipBici>
+    <numSerie>2</numSerie>
+    <fechaAdquisicion>2022-04-06</fechaAdquisicion>
+    <alquilada>false</alquilada>
+    <version>1</version>
+    <revision>0</revision>
+    <kilometrosTotales>0.0</kilometrosTotales>
+    <kilometrosRecorridosAlquilerActual>0.0</kilometrosRecorridosAlquilerActual>
+    <kilometrosRecorridosUltimoAlquiler>0.0</kilometrosRecorridosUltimoAlquiler>
+  </Ejercicio3.ChipBici>
+  <Ejercicio3.ChipBici>
+    <numSerie>3</numSerie>
+    <fechaAdquisicion>2022-04-06</fechaAdquisicion>
+    <alquilada>false</alquilada>
+    <version>1</version>
+    <revision>0</revision>
+    <kilometrosTotales>0.0</kilometrosTotales>
+    <kilometrosRecorridosAlquilerActual>0.0</kilometrosRecorridosAlquilerActual>
+    <kilometrosRecorridosUltimoAlquiler>0.0</kilometrosRecorridosUltimoAlquiler>
+  </Ejercicio3.ChipBici>
+</list>

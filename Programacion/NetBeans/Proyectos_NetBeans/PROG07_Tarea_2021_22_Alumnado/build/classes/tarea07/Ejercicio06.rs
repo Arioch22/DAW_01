@@ -1,0 +1,4 @@
+tarea07.ComparadorCitasPorNumObras
+tarea07.ComparadorCitasPorTexto
+tarea07.Ejercicio06
+tarea07.ComparadorCitasPorLongitud

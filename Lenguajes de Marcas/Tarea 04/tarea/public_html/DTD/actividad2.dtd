@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT almazara (clientes)>
+<!ATTLIST almazara nombre CDATA #FIXED 'Oleum Est Aurum' CIF CDATA #FIXED 'B12345878'>
+
+<!ELEMENT clientes (cliente)>
+<!ELEMENT cliente (contacto,tipo,direccion,telefonos,facturas)*>
+
+<!ATTLIST cliente codigo ID #REQUIRED>
+<!ELEMENT contacto (nombre,apellido)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT apellido (#PCDATA)>
+
+<!ELEMENT tipo (particular|empresa)>
+<!ELEMENT particular (NIF)>
+<!ELEMENT NIF (#PCDATA)>
+<!ELEMENT empresa (razon-social,web?,NIF)>
+<!ELEMENT razon-social (#PCDATA)>
+<!ELEMENT web (#PCDATA)>
+<!ELEMENT CIF (#PCDATA)>
+
+<!ELEMENT direccion (via,numero,localidad,provincia,CP)>
+<!ELEMENT via (#PCDATA)>
+<!ATTLIST via tipo NMTOKEN #REQUIRED>
+<!ELEMENT numero (#PCDATA)>
+<!ELEMENT localidad (#PCDATA)>
+<!ELEMENT provincia (#PCDATA)>
+<!ELEMENT CP (#PCDATA)>
+
+<!ELEMENT telefonos (telefono*)>
+<!ELEMENT telefono (#PCDATA)>
+<!ATTLIST telefono tipo (particular|direccion|rrhh|contabilidad) #REQUIRED>
+
+<!ELEMENT facturas (factura)>
+<!ELEMENT factura (forma-pago,fecha-vencimiento,productos,totalizacion)+>
+<!ATTLIST factura fecha CDATA #REQUIRED num ID #REQUIRED>
+
+<!ELEMENT forma-pago (#PCDATA)>
+
+<!ELEMENT fecha-vencimiento (#PCDATA)>
+<!ATTLIST fecha-vencimiento dias CDATA #REQUIRED>
+
+<!ELEMENT productos (producto)+>
+<!ELEMENT producto (nombre,cantidad-unidad,precio,cantidad)>
+<!ATTLIST producto codigo ID #REQUIRED>
+<!ELEMENT cantidad-unidad (#PCDATA)>
+<!ELEMENT precio (#PCDATA)>
+<!ATTLIST precio moneda NMTOKEN #REQUIRED>
+<!ELEMENT cantidad (#PCDATA)>
+
+<!ELEMENT totalizacion (subtotal,iva,total)>
+<!ELEMENT subtotal (#PCDATA)>
+<!ATTLIST subtotal moneda NMTOKEN #REQUIRED>
+<!ELEMENT iva (#PCDATA)>
+<!ATTLIST iva tipo CDATA #REQUIRED moneda NMTOKEN #REQUIRED>
+<!ELEMENT total (#PCDATA)>
+<!ATTLIST total moneda NMTOKEN #REQUIRED>
+
+
+
+

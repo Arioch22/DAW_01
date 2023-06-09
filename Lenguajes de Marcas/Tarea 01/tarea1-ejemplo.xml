@@ -1,0 +1,74 @@
+﻿<!-- Ejemplo de posible solución de la tarea 1 de Lenguajes de Marcas DAWD; curso 21/22 -->
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<inmobiliaria>
+  <!-- el nombre de la empresa tiene que ser un atributo por imposición de las especificaciones -->
+  <datos nombre="Me quitan el piso de la manos, S.L.">
+    <!-- Consultar limitaciones del CIF en https://www.facturadirecta.com/blog/diferencia-cif-nif/ -->
+    <cif>B76364789</cif>
+    
+    <direccion>
+      <via tipo="calle">Aguillar</via>
+      <numero>44</numero>
+      <bloque>1</bloque>
+      <planta>4</planta>
+      <letra>A</letra>
+      <localidad>Puente Genil</localidad>
+      <provincia>Córdoba</provincia>
+      <codigo-postal>14500</codigo-postal>
+    </direccion>
+
+    <web fecha-validez="17/12/2021">https://www.meloquitandelasmanos.es</web>
+    
+    <telefonos>
+      <numero tipo="movil">612345678</numero>
+      <numero tipo="fijo">957600407</numero>
+    </telefonos>
+  </datos>
+
+  <cartera-inmuebles>
+    <!-- codigo: código identificador por 2 letras mayúsculas (A-Z) y 3 dígitos 
+         operación: {venta, alquiler, venta-y-alquiler}
+         tipo: {casa, piso}
+         plantas: {1, 2, 3...} 1 para los pisos
+         garaje, trastero, ascensor: si/no
+    -->
+    <vivienda codigo="AX123" operacion="venta-y-alquiler" tipo="piso" plantas="1" garaje="si" trastero="no" ascensor="no">
+      <propietario>
+        <nombre-completo>
+          <nombre-propio>Agapito</nombre-propio>
+          <apellido-1>Pérez</apellido-1>
+          <apellido-2>López</apellido-2>
+        </nombre-completo>
+
+        <telefonos>
+          <numero tipo="movil">666777555</numero>
+          <numero tipo="fijo">954645789</numero>
+        </telefonos>
+
+        <emails>
+          <email tipo="principal">clientecontento@gmail.com</email>
+          <email tipo="secundario">encasodeemergencia@hotmail.com</email>
+        </emails>
+      </propietario>
+
+      <direccion-inmueble>
+        <via tipo="avenida">Torneo</via>
+        <numero>89</numero>
+        <bloque>3</bloque>
+        <planta>7</planta>
+        <letra>E</letra>
+        <localidad>Sevilla</localidad>
+        <provincia>Sevilla</provincia>
+        <codigo-postal>41002</codigo-postal>
+      </direccion-inmueble>
+
+      <superficie unidades="m2">105</superficie>
+      
+      <precio-alquiler moneda="euro">460000</precio>
+      <precio-venta moneda="euro">850</precio>
+    </vivienda>
+    <!-- resto de ejemplos de viviendas-->  
+  </cartera-inmuebles>
+</inmobiliaria>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="es-es">
+
+    <title type="text"> Tarea ATOM </title>
+    <id>http://www.laclaqueta.es/</id>
+    <link rel="self" type="application/atom+xml" href="http://www.laclaqueta.es/feed/canal.atom" />
+	<link rel="alternate" type="text/html" href="http://www.laclaqueta.es/"/>
+    <updated>2021-12-10T10:30:00+01:00</updated>
+    <author>
+        <name>Manuel Monterroso</name>
+        <email>manuel@gmail.com</email>
+    </author>
+    <category term="Cine,Estrenos y Cartelera"/>
+
+    <entry>
+    <id>https://www.cicelaclaqueta.es/noticias/nuevo_servicio_de_sindicacion</id>
+    <title>Cine la Claqueta crea web con servicio de sindicación de contenidos.</title>
+    <updated>2021-12-10T10:30:00+01:00</updated>
+    <author>
+        <name>Manuel Monterroso</name>
+        <email>manuel@gmail.com</email>
+    </author>
+    <summary>Atom de La Claqueta</summary>
+    <content>El cine La Claqueta añade a su web el servicio de sindicación de contenidos con los estándares RSS y Atom.</content>
+	<link rel="alternate" type="text/html" href="http://www.laclaqueta.es/"/>
+    <category term="Cine"/>
+    </entry>
+
+    <entry>
+    <id>https://www.fotogramas.es/noticias-cine/g25376309/netflix-mejores-peliculas-navidad/</id>
+    <title>LAS 46 MEJORES PELÍCULAS DE NAVIDAD EN NETFLIX, ORDENADAS</title>
+    <updated>2021-12-10T10:30:00+01:00</updated>
+    <author>
+        <name>Manuel Monterroso</name>
+        <email>manuel@gmail.com</email>
+    </author>
+    <summary>Películas navideñas Netflix</summary>
+    <content>Llegan las vacaciones de Navidad, y en el catálogo de Netflix tenemos la lista perfecta con las películas que tienes que ver, con muchas comedias románticas.</content>
+    <link rel="alternate" type="text/html" href="http://www.laclaqueta.es/"/>
+    <link rel="enclosure" type="image/jpg" href="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/arthur-christmas-1640711315.jpg" />
+    </entry>
+
+    <entry>
+    <id>https://www.actoresactricesrevista.com/peliculas-espanolas-navidenas</id>
+    <title>Películas españolas para ver en Navidad</title>
+    <updated>2021-12-10T10:30:00+01:00</updated>
+    <author>
+        <name>Manuel Monterroso</name>
+        <email>manuel@gmail.com</email>
+    </author>
+    <summary>Películas navideñas españolas</summary>
+    <content>LLegan las fechas navideñas y que mejor que recordar las películas nacionales sobre ella.</content>
+    <link rel="alternate" type="text/html" href="http://www.laclaqueta.es/"/>
+    <link rel="enclosure" type="image/jpg" href="https://static.wixstatic.com/media/44a1a8_be09d32ef0564a0ebef17c5f9c687f76~mv2.jpg" />
+    </entry>
+</feed>

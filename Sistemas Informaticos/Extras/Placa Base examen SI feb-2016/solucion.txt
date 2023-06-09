@@ -1,0 +1,26 @@
+A. Conector/es USB
+D. DVI-D
+E. HDMI
+F. Conector/es USB
+H. Conector/es USB
+
+J. Zócalo PCI
+K. Zócalo PCI
+L. Zócalo PCIEx16
+M. Zócalo PCIEx1
+N. Zócalo PCIEx16
+O. Zócalo PCIEx1
+P. Socket LGA1150
+Q. Chipset Northbridge
+S. Conectores SATA
+
+Las letras B, C, G, I, R, T y U no se encuentran en la lista pero son:
+B. Conector PS/2 para teclado y ratón (se puede conectar cualquiera de los dos).
+C. VGA
+G. Puerto Ethernet RJ45
+I. Conectores mini jack para audio
+R. Ranuras de memoria RAM DIMM 240 pines
+T. Conector para puerto LPT
+U. Conector alimentación de la placa ATX 24pines
+
+Un saludo!

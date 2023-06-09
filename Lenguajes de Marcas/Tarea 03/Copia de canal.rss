@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <language> es </language>
+        <title> Cine la Claqueta crea web con servicio de sindicación de contenidos. </title>
+        <link>  https://www.cicelaclaqueta.es/noticias/nuevo_servicio_de_sindicacion </link>
+        <description> El cine La Claqueta añade a su web el servicio de sindicación de contenidos con los estándares RSS y Atom. </description>
+        <pubDate> Sat, 18 Dec 2021 10:30:00 GMT </pubDate>
+
+        <item>
+            <title> LAS 46 MEJORES PELÍCULAS DE NAVIDAD EN NETFLIX, ORDENADAS </title>
+            <description> Llegan las vacaciones de Navidad, y en el catálogo de Netflix tenemos la lista perfecta con las películas que tienes que ver, con muchas comedias románticas.</description>
+            <enclosure url="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/arthur-christmas-1640711315.jpg" length="980" type="image/portada" />
+            <link> https://www.fotogramas.es/noticias-cine/g25376309/netflix-mejores-peliculas-navidad/ </link>
+            <author> @Manuel_Monterroso_Flores</author>
+        </item>
+
+    </channel>
+
+</rss>

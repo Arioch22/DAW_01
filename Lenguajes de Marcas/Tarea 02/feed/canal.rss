@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        
+        <language> es </language>
+        <title> Tarea RSS</title>
+        <link>http://www.laclaqueta.es/feed/canal.rss</link>
+        <description> Canal RSS de La Claqueta  </description>
+        <lastBuildDate> Sat, 18 Dec 2021 10:30:00 +0100 </lastBuildDate>
+        <managingEditor> manuel@gmail.com (Manuel Monterroso)</managingEditor>
+        <category> Cine, Estrenos, Cartelera </category>
+
+        <item>
+        <title> Cine la Claqueta crea web con servicio de sindicación de contenidos. </title>
+        <category> Cines </category>
+        <pubDate> Sat, 18 Dec 2021 10:30:00 +0100 </pubDate>
+        <description> El cine La Claqueta añade a su web el servicio de sindicación de contenidos con los estándares RSS y Atom. </description>
+        <link> https://www.cicelaclaqueta.es/noticias/nuevo_servicio_de_sindicacion </link>
+        </item>
+
+        <item>
+            <title> LAS 46 MEJORES PELÍCULAS DE NAVIDAD EN NETFLIX, ORDENADAS </title>
+            <category> Peliculas navideñas en Netflix </category>
+            <pubDate> Sat, 18 Dec 2021 10:30:00 +0100 </pubDate>
+            <description> Llegan las vacaciones de Navidad, y en el catálogo de Netflix tenemos la lista perfecta con las películas que tienes que ver, con muchas comedias románticas.</description>
+            <enclosure url="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/arthur-christmas-1640711315.jpg" length="980" type="image/portada" />
+            <link> https://www.fotogramas.es/noticias-cine/g25376309/netflix-mejores-peliculas-navidad/ </link>
+            <author> manuel@gmail.com (Manuel Monterroso)</author>
+        </item>
+
+        <item>
+            <title> Películas españolas para ver en Navidad </title>
+            <category> Peliculas navideñas españolas </category>
+            <pubDate> Sat, 18 Dec 2021 10:30:00 +0100 </pubDate>
+            <description> LLegan las fechas navideñas y que mejor que recordar las películas nacionales sobre ella. </description>
+            <enclosure url="https://static.wixstatic.com/media/44a1a8_be09d32ef0564a0ebef17c5f9c687f76~mv2.jpg" length="980" type="image/portada" />
+            <link> https://www.actoresactricesrevista.com/peliculas-espanolas-navidenas </link>
+            <author> manuel@gmail.com (Manuel Monterroso) </author>
+
+        </item>
+
+    </channel>
+
+</rss>

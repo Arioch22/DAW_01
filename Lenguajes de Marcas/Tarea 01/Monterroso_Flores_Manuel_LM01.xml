@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE inmobiliaria>
+<inmobiliaria>
+  <nombre> PortalCasa </nombre>
+  <cif> B14852585 </cif>
+  <direccion>
+    <calle> Avda. Aeropuerto nº 3 </calle>
+    <localidad> Córdoba </localidad>
+    <cp> 14005 </cp>
+  </direccion>
+  <web>https://wwww.portalcasa.es </web>
+  <telefono numero="fijo"> 957-252514 </telefono>
+  <telefono numero="movil"> 625-454741</telefono>
+  <viviendas>
+    <vivienda identificador="CA001">
+      <categoria> Venta </categoria>
+      <inmueble> Casa </inmueble>
+      <propietarios> Eduardo y Ana </propietarios>
+      <telefono numero="movil"> 658-585858 </telefono>
+      <email> eduardoyana@gmail.com</email>
+      <direccion>
+        <calle> C\ Eucalipto nº 20 </calle>
+        <localidad> Córdoba </localidad>
+        <cp> 14002 </cp>
+      </direccion>
+      <metros> 120m2 </metros>
+      <precio tipo="Venta"> 1.125.000€</precio>
+      <plantas> 2 </plantas>
+    </vivienda>
+    <vivienda identificador="CA002">
+      <categoria> Venta </categoria>
+      <categoria> Alquiler</categoria>
+      <inmueble> Piso </inmueble>
+      <propietarios> Alberto </propietarios>
+      <telefono numero="movil"> 698-323536 </telefono>
+      <email> alberto@outlook.es </email>
+      <direccion>
+        <calle> Avda. Medina Azahara nº 3 Bajo B</calle>
+        <localidad> Córdoba </localidad>
+        <cp> 14007 </cp>
+      </direccion>
+      <metros> 60m2 </metros>
+      <precio tipo="Venta"> 110.250€ </precio>
+      <precio tipo="Mensual"> 450€ </precio>
+      <trastero> No </trastero> 
+      <garaje> Si </garaje>
+      <ascensor> Si </ascensor>
+    </vivienda>
+    <vivienda identificador="CA003">
+      <categoria> Alquiler </categoria>
+      <inmueble> Piso </inmueble>
+      <propietarios> Aurora </propietarios>
+      <telefono numero="movil"> 632-858486 </telefono>
+      <email> aurora@yahoo.es </email>
+      <direccion>
+        <calle> C/ Gran Vía Parque nº 34 1ºB</calle>
+        <localidad> Córdoba </localidad>
+        <cp> 14005 </cp>
+      </direccion>
+      <metros> 80m2 </metros>
+      <alquiler tipo="mensual"> 600€ </alquiler>
+      <trastero> Si </trastero> 
+      <garaje> No </garaje>
+      <ascensor> Si </ascensor>
+    </vivienda>
+  </viviendas>
+</inmobiliaria>

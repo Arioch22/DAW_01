@@ -1,0 +1,97 @@
+package tarea07;
+
+import java.time.DayOfWeek;
+import java.time.LocalDate;
+import java.time.Month;
+import java.time.format.DateTimeFormatter;
+import java.util.Iterator;
+import java.util.LinkedHashMap;
+import java.util.LinkedHashSet;
+import java.util.Map;
+import java.util.Scanner;
+import java.util.Set;
+
+/**
+ * Ejercicio 5. Clasificación de fechas por día de la semana
+ *
+ * @author José Manuel García Isla
+ */
+public class Ejercicio05 {
+
+    public static void main(String[] args) {
+        //----------------------------------------------
+        //          Declaración de variables 
+        //----------------------------------------------
+        // Constantes
+        final int YEAR_MIN = 1900;
+        final int YEAR_MAX = 2100;
+
+        // Variables para entrada
+        Scanner teclado = new Scanner(System.in);
+        int year = 0;
+
+        // Variables
+        Map<Month, Map<DayOfWeek, Set<LocalDate>>> fechas = new LinkedHashMap();           // Vaya monstruo
+        LocalDate fechaInicio;
+
+        //----------------------------------------------
+        //               Entrada de datos 
+        //----------------------------------------------
+        System.out.println("CLASIFICACIÓN DE FECHAS DE UN AÑO POR DÍA DE LA SEMANA");
+        System.out.println("------------------------------------------------------");
+        
+        do {
+            System.out.println("Introduce un año (1900 - 2100):");
+            year = teclado.nextInt();
+        } while (year < YEAR_MIN || year > YEAR_MAX);
+
+        // Se crea una fecha inicial a partir del año introducido, se usará para obtener todas las fechas de ese año.
+        fechaInicio = LocalDate.of(year, Month.JANUARY, 1);
+
+        //----------------------------------------------
+        //                  Procesamiento
+        //----------------------------------------------
+        // Rellenar el mapa
+        for (Month mes : Month.values()) {
+            fechas.put(mes, new LinkedHashMap());                                       // Se asigna cada mes como llave de un mapa interno
+            for (DayOfWeek dia : DayOfWeek.values()) {
+                fechas.get(mes).put(dia, new LinkedHashSet());                       // Se asigna cada dia de la semana como llave de cada conjunto de fechas
+            }
+        }
+
+        // Renellenar el conjunto
+        for (int i = 0; i < fechaInicio.lengthOfYear(); i++) {
+            fechas.get(fechaInicio.getMonth()).get(fechaInicio.getDayOfWeek()).add(fechaInicio);        // Para cada fecha del año, se obtiene su mes y dia de la semana para usarlos como llaves de los mapas y añadir dicha fecha al conjunto correspondiente
+            fechaInicio = fechaInicio.plusDays(1);                                                                                   // Pasamos al día siguiente
+        }
+
+        //----------------------------------------------
+        //           Salida de resultados
+        //----------------------------------------------
+        System.out.println("MUESTREO DE FECHAS");
+        System.out.println("------------------");
+
+        System.out.println();
+        System.out.printf("Fechas de febrero que caen en lunes: \n");
+        fechasPorLinea(fechas.get(Month.FEBRUARY).get(DayOfWeek.MONDAY).iterator());        // Lamada al método pasandole el iterador correspondiente al conjunto de los lunes de frebero
+
+        System.out.println();
+        System.out.printf("Fechas de marzo que caen en jueves: \n");
+        fechasPorLinea(fechas.get(Month.MARCH).get(DayOfWeek.THURSDAY).iterator());
+
+        System.out.println();
+        System.out.printf("Fechas de diciembre que caen en domingo: \n");
+        fechasPorLinea(fechas.get(Month.DECEMBER).get(DayOfWeek.SUNDAY).iterator());
+        System.out.println();
+
+    }
+
+    // Metodo que recorre un conjunto de fechas y las muestra en pantalla linea a linea
+    // El método recibe un iterador para recorrer un conjunto de fechas en específico y las muestra por pantalla con un formato especial
+    private static void fechasPorLinea(Iterator<LocalDate> it) {
+        final DateTimeFormatter FORMATO_FECHA = DateTimeFormatter.ofPattern("dd/MM/YYYY");
+        while (it.hasNext()) {
+            System.out.println(it.next().format(FORMATO_FECHA));
+        }
+    }
+}

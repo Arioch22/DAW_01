@@ -1,0 +1,67 @@
+/* 
+    Created on : 10 mar. 2022, 15:32:52
+    Author     : profesorado
+*/
+
+/*
+Podemos definir los colores con el modelo Rojo (red) - Verde (green) - 
+Azul (blue) - alpha (RGBa) usando la notación funcional rgba(). RGBa amplia el
+modelo RGA añadiendo un canal alfa, permitiendo de esta manera especificar la
+opacidad de un color. La a representa opacidad: 0=transparente; 1=opaco;
+*/
+
+
+TextField{
+    -fx-font-size:40px;
+    -fx-text-fill: orangered;
+    -fx-font-weight: bold;
+}
+Button {
+    -fx-background-color: 
+        #000000,
+        linear-gradient(#9466FF, #5815F6),
+        linear-gradient(#9466FF, #5815F6),
+        linear-gradient(#F9BD6F, #FA8E01);
+    -fx-background-insets: 0,1,2,3;
+    -fx-background-radius: 3,2,2,2;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+}
+Button:hover { -fx-background-color: #FA8E01;
+               -fx-font-size: 22px;
+}
+
+Button:pressed { -fx-background-color: #FFFFFF;
+	-fx-text-fill: #000000;
+	-fx-font-weight: bold;
+}
+
+.borrarTodo{
+     -fx-background-color: #000000, linear-gradient(#ff5400, #be1d00);
+    
+}
+.borrarTodo:pressed{
+     -fx-background-color: #FFFFFF;
+	-fx-text-fill: #000000;
+	-fx-font-weight: bold;
+}
+
+.borrarUltimo{
+     -fx-background-color: #000000, linear-gradient(#52A839, #548246);
+}
+
+.borrarUltimo:pressed{
+     -fx-background-color: #FFFFFF;
+	-fx-text-fill: #000000;
+	-fx-font-weight: bold;
+}
+
+.operadores{
+    -fx-background-color: #000000, linear-gradient(#8757F7, #4D00FF);
+}
+
+.operadores:pressed{
+     -fx-background-color: #FFFFFF;
+	-fx-text-fill: #000000;
+	-fx-font-weight: bold;
+}

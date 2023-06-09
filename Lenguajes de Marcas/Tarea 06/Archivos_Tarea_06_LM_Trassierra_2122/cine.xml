@@ -1,0 +1,404 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<cine cod='AAA-01'>
+
+    <datos>
+        <nombre>CinePlus</nombre>
+            <ubicacion>
+            <direccion>Avda. del cerro, 5</direccion>
+            <localidad>Montilla</localidad>
+            <provincia>Córdoba</provincia>
+        </ubicacion>
+        <cif>G12345678</cif>
+        <tlf>957759486</tlf>
+        <url>http://www.cineplus.com</url>
+    </datos>
+
+    <peliculas>
+
+        <pelicula id='001' genero='Thriller'>
+            <titulo>The Batman</titulo>
+            <director>Matt Reeves</director>
+            <duracion>175</duracion>
+            <reparto_principal>
+                <actr>Robert Pattinson</actr>
+                <actr>Zoe Kravitz</actr>
+            </reparto_principal>
+            <sinopsis>En el segundo año de su lucha contra el crimen, Batman investiga la corrupción que recorre Gotham City y cómo conduce hasta su propia familia, mientras se enfrenta a un asesino conocido como Enigma.</sinopsis>
+        </pelicula>
+        <pelicula id='002' genero='Romance'>
+            <titulo>Los amores</titulo>
+            <director>Charline Bourgeois-Tacquet</director>
+            <duracion>97</duracion>
+            <reparto_principal>
+                <actr>Anais Demoustier</actr>
+                <actr>Valeria Bruni Tedeschi</actr>
+            </reparto_principal>
+            <sinopsis>Anais tiene 30 años y es inestable en lo económico y en el amor. Tiene un novio al que ya no ama. Anais conoce a Daniel, quien inmediatamente se enamora de ella. Pero Daniel vive con la escritora Émilie, y Anais se queda prendada de ella y de su seguridad en sí misma.</sinopsis>
+        </pelicula>
+        <pelicula id='003' genero='Accion'>
+            <titulo>Uncharted</titulo>
+            <director>Ruben Fleischer</director>
+            <duracion>112</duracion>
+            <reparto_principal>
+                <actr>Tom Holland</actr>
+                <actr>Mark Walberg</actr>
+            </reparto_principal>
+            <sinopsis>Basada en una de las series de videojuegos más vendidas y aclamadas por la crítica de todos los tiempos, "Uncharted" presenta a un joven, astuto y carismático, Nathan Drake (Tom Holland) en su primera aventura como cazatesoros con su ingenioso compañero Victor “Sully” Sullivan (Mark Wahlberg).</sinopsis>
+        </pelicula>
+        <pelicula id='004' genero='Animacion'>
+            <titulo>El Amazonas </titulo>
+            <director>Richard Claus</director>
+            <duracion>84</duracion>
+            <reparto_principal>
+                <actr>Animación</actr>
+            </reparto_principal>
+            <sinopsis>La pequeña Ainbo vive en lo más profundo de la selva amazónica. Tras perder a su madre y pelearse con los adultos de su aldea, esta joven arquera emprende un viaje para salvar a su pueblo del poder destructor del hombre blanco.</sinopsis>
+        </pelicula>
+        <pelicula id='005' genero='Drama'>
+            <titulo>Belfast</titulo>
+            <director>Kenneth Branagh</director>
+            <duracion>98</duracion>
+            <reparto_principal>
+                <actr>Judi Dench</actr>
+                <actr>Jude Hill</actr>
+            </reparto_principal>
+            <sinopsis>Relato semiautobiográfico sobre un niño de 9 años que, junto a su familia de clase trabajadora, vive los tumultuosos años 60 en la capital de Irlanda del Norte.</sinopsis>
+        </pelicula>
+        <pelicula id='006' genero='Romance'>
+            <titulo>Cásate conmigo</titulo>
+            <director>Kat Coiro</director>
+            <duracion>112</duracion>
+            <reparto_principal>
+                <actr>Jennifer Lopez</actr>
+                <actr>Maluma</actr>
+            </reparto_principal>
+            <sinopsis>Las superestrellas de la música: Kat Valdez (Jennifer Lopez) y Bastian (Maluma) se van a casar frente a una audiencia mundial de fans. Pero cuando Kat se entera, segundos antes de decir sus votos de matrimonio, que Bastian le ha sido infiel decide terminar casándose con Charlie (Owen Wilson), un completo extraño que se encontraba entre los espectadores.</sinopsis>
+        </pelicula>
+        <pelicula id='007' genero='Comedia'>
+            <titulo>Competencia</titulo>
+            <director>Gastón Duprat</director>
+            <duracion>114</duracion>
+            <reparto_principal>
+                <actr>Antonio Banderas</actr>
+                <actr>Penélope Cruz</actr>
+            </reparto_principal>
+            <sinopsis>En busca de trascendencia y prestigio social, un empresario multimillonario decide hacer una película que deje huella.</sinopsis>
+        </pelicula>
+        <pelicula id='008' genero='Drama'>
+            <titulo>El método Willy</titulo>
+            <director>Reinaldo Marcus Green</director>
+            <duracion>138</duracion>
+            <reparto_principal>
+                <actr>Will Smith</actr>
+                <actr>Aunjanue Ellis</actr>
+            </reparto_principal>
+            <sinopsis>Biopic sobre Richard Williams, un padre inasequible que ayudó a formar a dos de las deportistas más extraordinarias de todos los tiempos, dos atletas que acabarían marcando época en el deporte del tenis.</sinopsis>
+        </pelicula>
+        <pelicula id='009' genero='Comedia'>
+            <titulo>El triunfo</titulo>
+            <director>Emmanuel Courcol</director>
+            <duracion>106</duracion>
+            <reparto_principal>
+                <actr>Marina Hands</actr>
+                <actr>Kad Merad</actr>
+            </reparto_principal>
+            <sinopsis>Aunque esté en el paro con frecuencia, Etienne (Kad Meran) es un entrañable actor que dirige un taller de teatro en un centro penitenciario. Allí reúne a un grupo insólito de internos para representar la famosa obra de Samuel Beckett 'Esperando a Godot'.</sinopsis>
+        </pelicula>
+        <pelicula id='010' genero='Animacion'>
+            <titulo>Encanto</titulo>
+            <director>Jared Bush</director>
+            <duracion>99</duracion>
+            <reparto_principal>
+                <actr>Animación</actr>
+            </reparto_principal>
+            <sinopsis>Cuenta la historia de una familia extraordinaria, los Madrigal, que viven escondidos en las montañas de Colombia, en una casa mágica situada en un enclave maravilloso llamado Encanto.</sinopsis>
+        </pelicula>
+        <pelicula id='011' genero='Terror'>
+            <titulo>La abuela</titulo>
+            <director>Paco Plaza</director>
+            <duracion>99</duracion>
+            <reparto_principal>
+                <actr>Almudena Amor</actr>
+                <actr>Vera Valdez</actr>
+            </reparto_principal>
+            <sinopsis>Susana tiene que dejar su vida en París, donde trabaja como modelo, para regresar a Madrid, debido a que su abuela, pero lo que deberían ser solo unos días con su abuela se acabarán convirtiendo en una terrorífica pesadilla.</sinopsis>
+        </pelicula>
+        <pelicula id='012' genero='Romance'>
+            <titulo>Licor Pizza</titulo>
+            <director>Paul Thomas Anderson</director>
+            <duracion>133</duracion>
+            <reparto_principal>
+                <actr>Alana Haim</actr>
+                <actr>Cooper Hoffman</actr>
+            </reparto_principal>
+            <sinopsis>Es la historia de Alana Kane y Gary Valentine, de cómo crecen juntos, salen y acaban enamorándose en el Valle de San Fernando en 1973.</sinopsis>
+        </pelicula>
+
+    </peliculas>
+
+    <salas>
+
+        <sala id='01'>
+            <n_butacas>120</n_butacas>
+            <discapacitados />
+            <tresd />
+        </sala>
+        <sala id='02'>
+            <n_butacas>124</n_butacas>
+            <discapacitados />
+            <tresd />
+        </sala>
+        <sala id='03'>
+            <n_butacas>121</n_butacas>
+            <discapacitados />
+            <tresd />
+        </sala>
+        <sala id='04'>
+            <n_butacas>120</n_butacas>
+            <discapacitados />
+            <tresd />
+        </sala>
+        <sala id='05'>
+            <n_butacas>117</n_butacas>
+            <discapacitados />
+            <tresd />
+        </sala>
+        <sala id='06'>
+            <n_butacas>118</n_butacas>
+            <discapacitados />
+            <tresd />
+        </sala>
+        <sala id='07'>
+            <n_butacas>125</n_butacas>
+            <discapacitados />
+        </sala>
+        <sala id='08'>
+            <n_butacas>132</n_butacas>
+            <discapacitados />
+        </sala>
+        <sala id='09'>
+            <n_butacas>140</n_butacas>
+            <discapacitados />
+        </sala>
+        <sala id='10'>
+            <n_butacas>110</n_butacas>
+        </sala>
+        <sala id='11'>
+            <n_butacas>112</n_butacas>
+        </sala>
+
+    </salas>
+
+    <sesiones>
+
+        <sesion>
+            <sala ref='01' />
+            <pelicula ref='012' />
+            <dia>Viernes</dia>
+            <hora>19:00</hora>
+        </sesion>
+        <sesion>
+            <sala ref='01' />
+            <pelicula ref='001' />
+            <dia>Viernes</dia>
+            <hora>21:00</hora>
+        </sesion>
+        <sesion>
+            <sala ref='01' />
+            <pelicula ref='001' />
+            <dia>Sábado</dia>
+            <hora>00:00</hora>
+        </sesion>
+        <sesion>
+            <sala ref='01' />
+            <pelicula ref='012' />
+            <dia>Domingo</dia>
+            <hora>10:00</hora>
+        </sesion>
+        <sesion>
+            <sala ref='01' />
+            <pelicula ref='001' />
+            <dia>Domingo</dia>
+            <hora>12:30</hora>
+        </sesion>
+        <sesion>
+            <sala ref='02' />
+            <pelicula ref='011' />
+            <dia>Viernes</dia>
+            <hora>22:20</hora>
+        </sesion>
+        <sesion>
+            <sala ref='02' />
+            <pelicula ref='011' />
+            <dia>Sábado</dia>
+            <hora>00:30</hora>
+        </sesion>
+        <sesion>
+            <sala ref='02' />
+            <pelicula ref='002' />
+            <dia>Domingo</dia>
+            <hora>12:15</hora>
+        </sesion>
+        <sesion>
+            <sala ref='03' />
+            <pelicula ref='003' />
+            <dia>Viernes</dia>
+            <hora>21:50</hora>
+        </sesion>
+        <sesion>
+            <sala ref='03' />
+            <pelicula ref='003' />
+            <dia>Sábado</dia>
+            <hora>00:30</hora>
+        </sesion>
+        <sesion>
+            <sala ref='03' />
+            <pelicula ref='003' />
+            <dia>Domingo</dia>
+            <hora>12:45</hora>
+        </sesion>
+        <sesion>
+            <sala ref='04' />
+            <pelicula ref='004' />
+            <dia>Viernes</dia>
+            <hora>21:55</hora>
+        </sesion>
+        <sesion>
+            <sala ref='04' />
+            <pelicula ref='012' />
+            <dia>Sábado</dia>
+            <hora>00:00</hora>
+        </sesion>
+        <sesion>
+            <sala ref='04' />
+            <pelicula ref='004' />
+            <dia>Domingo</dia>
+            <hora>13:00</hora>
+        </sesion>
+        <sesion>
+            <sala ref='05' />
+            <pelicula ref='005' />
+            <dia>Viernes</dia>
+            <hora>22:10</hora>
+        </sesion>
+        <sesion>
+            <sala ref='05' />
+            <pelicula ref='010' />
+            <dia>Sábado</dia>
+            <hora>22:20</hora>
+        </sesion>
+        <sesion>
+            <sala ref='05' />
+            <pelicula ref='005' />
+            <dia>Domingo</dia>
+            <hora>12:55</hora>
+        </sesion>
+        <sesion>
+            <sala ref='06' />
+            <pelicula ref='006' />
+            <dia>Viernes</dia>
+            <hora>22:15</hora>
+        </sesion>
+        <sesion>
+            <sala ref='06' />
+            <pelicula ref='006' />
+            <dia>Sábado</dia>
+            <hora>22:55</hora>
+        </sesion>
+        <sesion>
+            <sala ref='06' />
+            <pelicula ref='008' />
+            <dia>Domingo</dia>
+            <hora>13:10</hora>
+        </sesion>
+        <sesion>
+            <sala ref='07' />
+            <pelicula ref='007' />
+            <dia>Viernes</dia>
+            <hora>21:35</hora>
+        </sesion>
+        <sesion>
+            <sala ref='07' />
+            <pelicula ref='007' />
+            <dia>Sábado</dia>
+            <hora>23:10</hora>
+        </sesion>
+        <sesion>
+            <sala ref='07' />
+            <pelicula ref='009' />
+            <dia>Domingo</dia>
+            <hora>13:35</hora>
+        </sesion>
+        <sesion>
+            <sala ref='08' />
+            <pelicula ref='008' />
+            <dia>Viernes</dia>
+            <hora>21:30</hora>
+        </sesion>
+        <sesion>
+            <sala ref='08' />
+            <pelicula ref='008' />
+            <dia>Sábado</dia>
+            <hora>23:00</hora>
+        </sesion>
+        <sesion>
+            <sala ref='08' />
+            <pelicula ref='006' />
+            <dia>Domingo</dia>
+            <hora>13:00</hora>
+        </sesion>
+        <sesion>
+            <sala ref='09' />
+            <pelicula ref='009' />
+            <dia>Viernes</dia>
+            <hora>22:05</hora>
+        </sesion>
+        <sesion>
+            <sala ref='09' />
+            <pelicula ref='009' />
+            <dia>Sábado</dia>
+            <hora>23:20</hora>
+        </sesion>
+        <sesion>
+            <sala ref='09' />
+            <pelicula ref='007' />
+            <dia>Domingo</dia>
+            <hora>13:15</hora>
+        </sesion>
+        <sesion>
+            <sala ref='10' />
+            <pelicula ref='005' />
+            <dia>Sábado</dia>
+            <hora>22:50</hora>
+        </sesion>
+        <sesion>
+            <sala ref='10' />
+            <pelicula ref='010' />
+            <dia>Domingo</dia>
+            <hora>12:05</hora>
+        </sesion>
+        <sesion>
+            <sala ref='11' />
+            <pelicula ref='002' />
+            <dia>Viernes</dia>
+            <hora>22:00</hora>
+        </sesion>
+        <sesion>
+            <sala ref='11' />
+            <pelicula ref='002' />
+            <dia>Sábado</dia>
+            <hora>23:45</hora>
+        </sesion>
+        <sesion>
+            <sala ref='11' />
+            <pelicula ref='011' />
+            <dia>Domingo</dia>
+            <hora>12:55</hora>
+        </sesion>
+        
+
+    </sesiones>
+
+
+</cine>

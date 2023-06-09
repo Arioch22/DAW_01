@@ -1,0 +1,7 @@
+Nombre y apellidos             DNI                   Nota teoría                Nota práctica                Nota final                    Nota acta
+Francisco Javier Martínez   11111111A                   7,00                        7,00                        7,00                        Notable                     
+Diosdado Sánchez            22222222B                   8,00                        5,00                        6,65                        Aprobado                    
+Germán Roche                33333333C                   3,00                        5,00                        3,90                        Suspenso                    
+José Javier Bermúdez        44444444D                   6,00                        8,00                        6,90                        Aprobado                    
+Milagros Solvas             55555555E                   7,10                        8,25                        7,62                        Notable                     
+Sandra Rentero              66666666F                   9,00                        9,00                        9,00                        Sobresaliente               

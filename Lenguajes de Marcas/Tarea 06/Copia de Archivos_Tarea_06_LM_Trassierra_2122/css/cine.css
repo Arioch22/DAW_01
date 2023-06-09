@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap');
+/*hoja de estilos para la plantilla html de la tarea 05 de LM - 2122*/
+:root{
+    --pag_color:#fcfcfc;
+    --fondo-color: #f4f3f3;
+    --bloque-color: #dfdada;
+    --cabecera-color: #899e9e;
+    --destacado-color: #d9d9d9;
+}
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--pag-color);
+    font-family: 'Lobster Two', cursive;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: flex-start;
+}
+header{
+    margin:auto;
+    text-align: center;
+}
+header img{
+  margin-top:20px;
+  max-width: 600px;
+}
+header h1{
+  font-size:2em;
+  text-transform: uppercase;
+}
+header h3{
+  margin-top:-2px;
+  font-weight: 200;
+}
+.salas {
+    background-color:var(--bloque-color); 
+    width:100%;
+    border-top: 4px solid var(--cabecera-color);
+
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+    flex-wrap:wrap;
+}
+
+.salas .bloque {
+    padding:2vw;
+    flex:1 0 40%;
+    min-width: 300px;
+    max-width:800px;
+}
+.salas .bloque h1, .peliculas .bloque h1{
+    padding:10px;
+    background-color: var(--cabecera-color);
+    box-shadow: 5px 5px 8px #88888879;
+}
+.salas .bloque .items{
+    margin-left:15px;
+    padding:20px;
+    box-shadow: 5px 1px 8px #88888879;
+}
+.salas .bloque .items{background-color: var(--fondo-color);}
+
+.salas .bloque .items .item{
+    line-height: 25px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center ;
+}
+.peliculas {
+    background-color: var(--fondo-color);
+
+    margin:10px auto 20px;
+    padding:20px;
+    width: 80%;
+    border-top: 4px solid var(--cabecera-color);
+    
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap:wrap;
+}
+
+.peliculas .bloque {
+    padding:2vw;
+    
+    flex:1 0 40%;
+    max-width:800px;
+}
+
+.peliculas .bloque .items{
+    background-color: var(--pag_color);
+    margin-left:15px;
+    padding: 10px;
+    box-shadow: 5px 1px 8px #88888879;
+}
+.peliculas .bloque .tipo {
+    text-transform: uppercase;
+    padding:10px;
+}
+.peliculas .bloque .tipo .item{
+    margin-left:15px;
+    text-transform: initial;
+    text-decoration:none;
+}
+footer{
+    background-color: var(--cabecera-color);
+    line-height:50px;
+    width:100%;
+}
+footer p{
+    text-align: center;
+    
+}
+footer p a{
+    text-decoration: none;
+    font-weight: bolder;
+    color: white;
+}

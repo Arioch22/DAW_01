@@ -1,0 +1,26 @@
+Identifica claramente (como muestra el ej) sólo los elementos de la lista que estén presentes en la “Figura 1. Placa Base” (Nota: Debes identificar todas las veces que aparezca un mismo elemento):        LISTA DE ELEMENTOS:
+
+ 
+
+Módulos de memoria SIMM.
+Módulos de memoria DIMM 168 pines.
+Chipset Northbridge.
+Ej.: Pila (Cualquiera de las 2 formas de identificación es válida)
+Socket LGA1150
+Conector/es USB
+Zócalo PCIEx1
+Fireware
+eSATA
+Conectores SATA
+Zócalo para microprocesador tipo ZIP
+Nuevo Socket 478
+DVI-I.
+Zócalo PCIEx16
+Zócalo PCI.
+Zócalo AGP
+Conector/es IDE.
+Conector/es SATA.
+Conector RJ11
+Zócalo PCIEx4
+HDMI
+DVI-D.
